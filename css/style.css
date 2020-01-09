@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  background-color: #f7f7f7;
+}
+
+.page {
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background: #333333;
+}
+header nav {
+  /* */
+}
+header ul {
+  list-style: none;
+  width: 20rem;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+  height: 48px;
+}
+
+header li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+header li:hover {
+  opacity: 0.5;
+}
+
+header a {
+  height: 48px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* ################################################################## 
+   ################################################################## 
+   ################################################################## */
+
+.content {
+  background-color: #ffffff;
+  height: 100%;
+}
