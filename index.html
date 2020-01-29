@@ -13,8 +13,7 @@
 
     <title>Homepage</title>
   </head>
-  <body>
-    <!--   class="modal-open">-->
+  <body class="modal-open">
     <header>
       <div>
         <span>
@@ -33,6 +32,26 @@
     <span class="section-one-wrap">
       <section id="one" class="section-one">
         one dsadas
+        <a
+          style='background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px'
+          href="https://unsplash.com/@danielleone?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Download free do whatever you want high-resolution photos from Daniel Leone"
+          ><span style="display:inline-block;padding:2px 3px"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white"
+              viewBox="0 0 32 32"
+            >
+              <title>unsplash-logo</title>
+              <path
+                d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"
+              ></path></svg></span
+          ><span style="display:inline-block;padding:2px 3px"
+            >Image by Daniel Leone</span
+          ></a
+        >
       </section>
     </span>
 
@@ -49,7 +68,7 @@
         three
       </section>
     </span>
-    <!--  
+
     <div class="modal" id="modal-container">
       <h1>
         DIESE SEITE <br />BEFINDET SICH <br />
@@ -57,7 +76,7 @@
       </h1>
       <p>THIS SITE IS UNDER CONSTRUCTION.</p>
       <button id="modal-button">OK</button>
-    </div>-->
+    </div>
     <!-- end modal -->
 
     <script>
@@ -66,8 +85,8 @@
       const modalContainer = document.getElementById('modal-container');
 
       modalButton.addEventListener('click', event => {
-        body.classList.remove('modal-open');
         modalContainer.classList.add('fade-up');
+        body.classList.remove('modal-open');
         setTimeout(() => {
           //modalContainer.style.display = 'none';
           modalContainer.parentNode.removeChild(modalContainer);

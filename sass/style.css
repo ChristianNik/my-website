@@ -87,12 +87,6 @@ header div nav a.active {
   font-weight: bold;
 }
 
-section {
-  padding: 20px;
-  height: 100%;
-  color: #ffffff;
-}
-
 .section-one-wrap {
   grid-column: 1 / -1;
   -ms-grid-row: 1;
@@ -119,6 +113,12 @@ section {
   opacity: 0.4;
 }
 
+section {
+  padding: 20px;
+  height: 100%;
+  color: #ffffff;
+}
+
 .section-two-wrap {
   grid-column: 1 / -1;
   -ms-grid-row: 3;
@@ -143,6 +143,13 @@ section {
 
 .section-one {
   position: relative;
+  padding-top: calc(47px + 20px);
+}
+
+.section-one a {
+  position: absolute;
+  top: 90%;
+  left: 20px;
 }
 
 .section-two {
