@@ -13,23 +13,31 @@
 
     <title>Homepage</title>
   </head>
-  <body class="modal-open">
-    <div class="modal " id="modal-container">
-      <h1>
-        DIESE SEITE <br />BEFINDET SICH <br />
-        IM AUFBAU.
-      </h1>
-      <p>THIS SITE IS UNDER CONSTRUCTION.</p>
-      <button id="modal-button">OK</button>
-    </div>
+  <body>
+    <!--   class="modal-open">-->
+    <header>
+      <div>
+        <span>
+          <img src="./images/Logo 1@2x.png" alt="" width="30px" height="30px" />
+          Christian Nikel
+        </span>
+        <nav>
+          <a href="#one" class="active">home</a>
+          <a href="#two">erfahrung</a>
+          <a href="#three">portfolio</a>
+          <a href="#three">erfahrung</a>
+          <a href="#three">kontakt</a>
+        </nav>
+      </div>
+    </header>
     <span class="section-one-wrap">
-      <section class="section-one">
-        one
+      <section id="one" class="section-one">
+        one dsadas
       </section>
     </span>
 
     <span class="section-two-wrap">
-      <section class="section-two">
+      <section id="two" class="section-two">
         <div class="soft-ui">
           Lorem, ipsum.
         </div>
@@ -37,10 +45,21 @@
     </span>
 
     <span class="section-three-wrap">
-      <section class="section-three">
+      <section id="three" class="section-three">
         three
       </section>
     </span>
+    <!--  
+    <div class="modal" id="modal-container">
+      <h1>
+        DIESE SEITE <br />BEFINDET SICH <br />
+        IM AUFBAU.
+      </h1>
+      <p>THIS SITE IS UNDER CONSTRUCTION.</p>
+      <button id="modal-button">OK</button>
+    </div>-->
+    <!-- end modal -->
+
     <script>
       const body = document.querySelector('.modal-open');
       const modalButton = document.getElementById('modal-button');
