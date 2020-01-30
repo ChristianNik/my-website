@@ -37,7 +37,7 @@ header {
   opacity: 0.85;
 }
 
-header div {
+header .header-center {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: n;
@@ -48,7 +48,7 @@ header div {
   color: #FFFFFE;
 }
 
-header div span {
+header .header-center span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,11 +57,11 @@ header div span {
           align-items: center;
 }
 
-header div span img {
+header .header-center span img {
   margin-right: 7px;
 }
 
-header div nav {
+header .header-center .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,15 +77,34 @@ header div nav {
   height: 100%;
 }
 
-header div nav a {
+header .header-center .navigation a {
   margin-left: 50px;
   text-decoration: none;
   color: #90B4CE;
 }
 
-header div nav a.active {
+header .header-center .navigation a.active {
   color: #3DA9FC;
   font-weight: bold;
+}
+
+.navigation-icon {
+  display: none;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  background: url("../images/bx-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (max-width: 1370px) {
+  .navigation-icon {
+    display: block;
+  }
+  .header-center .navigation a {
+    display: none;
+  }
 }
 
 section {
@@ -313,6 +332,11 @@ section {
   width: 48px;
   height: 48px;
   background: #767777;
+}
+
+.sozial-icons:hover {
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
 }
 
 .sozial-icons.linkedin {
