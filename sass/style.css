@@ -84,6 +84,14 @@
   font-family: 'Roboto', sans-serif;
 }
 
+*::-moz-selection {
+  background: #3DA9FC;
+}
+
+*::selection {
+  background: #3DA9FC;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -126,10 +134,20 @@ header .header-center {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  color: #FFFFFE;
 }
 
-header .header-center span {
+header .header-center a {
+  color: #FFFFFE;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+header .header-center a span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,7 +156,7 @@ header .header-center span {
           align-items: center;
 }
 
-header .header-center span img {
+header .header-center a span img {
   margin-right: 7px;
 }
 
@@ -159,9 +177,16 @@ header .header-center .navigation {
 }
 
 header .header-center .navigation a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 50px;
   text-decoration: none;
   color: #90B4CE;
+  height: 100%;
 }
 
 header .header-center .navigation a.active {
@@ -208,7 +233,7 @@ section {
   bottom: 10px;
   background: -webkit-gradient(linear, right top, left bottom, from(#133c55), to(#3DA9FC));
   background: linear-gradient(to bottom left, #133c55, #3DA9FC);
-  opacity: 0.4;
+  opacity: 0.1;
 }
 
 .section-one {
@@ -263,7 +288,6 @@ section {
   right: 20px;
   bottom: calc(5vw + 20px);
   color: #5F6C7B;
-  text-decoration: none;
   text-shadow: none;
 }
 

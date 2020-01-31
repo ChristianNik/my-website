@@ -11,10 +11,13 @@ $light-blue:  #3DA9FC
 $darker-blue: #051e2f
 
 $primary: $light-blue
+$selection: $light-blue
 
 *
   box-sizing: border-box
   font-family: 'Roboto', sans-serif
+  &::selection
+    background: $selection
 
 html
   scroll-behavior: smooth
@@ -45,12 +48,16 @@ header
     grid-area: n
     display: grid
     grid-template-columns: 1fr 1fr
-    color: #FFFFFE
-    span
+    a
+      color: #FFFFFE
       display: flex
       align-items: center
-      img
-        margin-right: 7px
+      text-decoration: none
+      span
+        display: flex
+        align-items: center
+        img
+          margin-right: 7px
     .navigation
       display: flex
       align-items: center
@@ -59,9 +66,12 @@ header
       align-self: center
       height: 100%
       a
+        display: flex
+        align-items: center
         margin-left: 50px
         text-decoration: none
         color: #90B4CE
+        height: 100%
         &.active
           color: $primary
           font-weight: bold
@@ -103,7 +113,7 @@ section
     left: 0
     bottom: 10px
     background: linear-gradient(to bottom left, #133c55 , $primary)
-    opacity: 0.4
+    opacity: 0.1
 
 .section-one
   position: relative
@@ -138,7 +148,6 @@ section
     right: 20px
     bottom: calc(5vw + 20px)
     color: #5F6C7B
-    text-decoration: none
     text-shadow: none
 
 ////I
