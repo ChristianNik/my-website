@@ -200,40 +200,35 @@ header .header-center .navigation a.active {
   background-position: center;
 }
 
-.area {
+.section-enclose {
+  position: relative;
   width: 100%;
+  height: 100%;
+  min-height: 100px;
+  color: #fffffe;
+  margin-bottom: -5vw;
 }
 
-.area > * {
+.section-enclose section {
+  padding-top: calc( 5vw + 20px);
+  padding-bottom: calc( 5vw + 20px);
+}
+
+.section-enclose > * {
   padding: 20px;
 }
 
-.area.top {
-  margin-top: calc(47px + 0px);
+.section-enclose .top {
+  padding-top: calc(47px + 20px);
 }
 
 .se-info {
-  z-index: 98;
   background: #3DA9FC;
-  margin-bottom: -5vw;
-}
-
-.se-info::before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  bottom: 10px;
-  background: -webkit-gradient(linear, right top, left bottom, from(#133c55), to(#3DA9FC));
-  background: linear-gradient(to bottom left, #133c55, #3DA9FC);
-  opacity: 0.1;
-}
-
-.info {
-  color: #fffffe;
   height: 88vh;
+}
+
+#info {
+  height: 100%;
   position: relative;
   display: -ms-grid;
   display: grid;
@@ -248,59 +243,7 @@ header .header-center .navigation a.active {
   background-size: cover;
 }
 
-.se-skills {
-  z-index: 99;
-  -webkit-filter: drop-shadow(0px -2px 11px #0C2F47);
-          filter: drop-shadow(0px -2px 11px #0C2F47);
-}
-
-.skills {
-  position: relative;
-  -webkit-clip-path: polygon(0 5vw, 0 100%, 100% 100%, 100% 0);
-          clip-path: polygon(0 5vw, 0 100%, 100% 100%, 100% 0);
-  background: #094067;
-  height: 800px;
-  padding-top: calc( 5vw + 20px);
-}
-
-.section-one-wrap {
-  z-index: 98;
-  background: #3DA9FC;
-}
-
-.section-one-wrap::before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  bottom: 10px;
-  background: -webkit-gradient(linear, right top, left bottom, from(#133c55), to(#3DA9FC));
-  background: linear-gradient(to bottom left, #133c55, #3DA9FC);
-  opacity: 0.1;
-}
-
-.section-one {
-  margin-bottom: -5vw;
-  height: 88vh;
-  position: relative;
-  padding-top: calc(47px + 0px);
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 0.46fr 1fr 48px 0.46fr;
-      grid-template-columns: 0.46fr 1fr 48px 0.46fr;
-  -ms-grid-rows: 27% 20% 50px 7% 28%;
-      grid-template-rows: 27% 20% 50px 7% 28%;
-      grid-template-areas: ". . . ." ". t . ." ". . . ." ". p p .";
-  background: url("../images/background mountain.jpg");
-  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.section-one .one-title {
+#info .one-title {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
@@ -310,15 +253,15 @@ header .header-center .navigation a.active {
   font-size: 80px;
 }
 
-.section-one .one-title span {
+#info .one-title span {
   font-weight: bold;
 }
 
-.section-one .one-title span span {
+#info .one-title span span {
   color: #3DA9FC;
 }
 
-.section-one .one-paragraph {
+#info .one-paragraph {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4 / 5;
@@ -334,7 +277,7 @@ header .header-center .navigation a.active {
       align-self: flex-end;
 }
 
-.section-one .creator-link {
+#info .creator-link {
   position: absolute;
   right: 20px;
   bottom: calc(5vw + 20px);
@@ -342,36 +285,40 @@ header .header-center .navigation a.active {
   text-shadow: none;
 }
 
-.section-skills-wrap {
-  margin-bottom: -5vw;
-  z-index: 99;
+.se-skills {
   -webkit-filter: drop-shadow(0px -2px 11px #0C2F47);
           filter: drop-shadow(0px -2px 11px #0C2F47);
 }
 
-.section-skills {
-  position: relative;
+#skills {
+  padding-top: calc( 5vw + 20px);
   -webkit-clip-path: polygon(0 5vw, 0 100%, 100% 100%, 100% 0);
           clip-path: polygon(0 5vw, 0 100%, 100% 100%, 100% 0);
   background: #094067;
   height: 800px;
-  padding-top: calc( 5vw + 20px);
 }
 
-.section-three-wrap {
-  margin-bottom: -5vw;
+.se-portfolio {
+  -webkit-filter: drop-shadow(0px 2px 21px #01243a);
+          filter: drop-shadow(0px 2px 21px #01243a);
   z-index: 100;
+}
+
+#portfolio {
+  -webkit-clip-path: polygon(0 0, 0 calc(100% + 5vw), 100% 100%, 100% 5vw);
+          clip-path: polygon(0 0, 0 calc(100% + 5vw), 100% 100%, 100% 5vw);
+  background: #072F4B;
+}
+
+.se-experience {
   -webkit-filter: drop-shadow(0px 2px 21px #01243a);
           filter: drop-shadow(0px 2px 21px #01243a);
 }
 
-.section-three {
-  position: relative;
+#experience {
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 5vw);
           clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 5vw);
-  background: #072F4B;
-  height: 400px;
-  padding-top: calc( 5vw + 20px);
+  background: #356282;
 }
 
 .modal {
