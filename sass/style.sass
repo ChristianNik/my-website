@@ -45,6 +45,7 @@ header
   background: #051E2F
   height: 47px
   opacity: 0.85
+  top: 0
   .header-center
     grid-area: n
     display: grid
@@ -88,14 +89,54 @@ header
 ////I
 ////I end NAV
 
-section
-  height: 100%
-  color: #ffffff
-
+.area
+  width: 100%
+  > *
+    padding: 20px
   &.top
     margin-top: calc(47px + 0px)
-  &.enclose
+  &.section-enclose
 
+.se-info
+  z-index: 98
+  background: $primary
+  margin-bottom: -5vw
+  &::before
+    position: absolute
+    content: ""
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    bottom: 10px
+    background: linear-gradient(to bottom left, #133c55 , $primary)
+    opacity: 0.1
+
+.info
+  color: #fffffe
+  height: 88vh
+  position: relative
+
+  display: grid
+  grid-template-columns: 0.46fr 1fr 48px 0.46fr
+  grid-template-rows: 27% 20% 50px 7% 28%
+  grid-template-areas: /*"h h h h"*/". . . ." ". t . ." ". . . ." ". p p ."
+  background: url('../images/background mountain.jpg')
+
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
+.se-skills
+  z-index: 99
+  filter: drop-shadow(0px -2px 11px #0C2F47)
+
+.skills
+  position: relative
+  clip-path: polygon(0 5vw, 0 100%, 100% 100%, 100% 0)
+  background: #094067
+  height: 800px
+  padding-top: calc( 5vw + 20px )
 ////I  Section one 
 ////I   
 

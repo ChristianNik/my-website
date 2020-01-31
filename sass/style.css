@@ -118,6 +118,7 @@ header {
   background: #051E2F;
   height: 47px;
   opacity: 0.85;
+  top: 0;
 }
 
 header .header-center {
@@ -199,13 +200,67 @@ header .header-center .navigation a.active {
   background-position: center;
 }
 
-section {
-  height: 100%;
-  color: #ffffff;
+.area {
+  width: 100%;
 }
 
-section.top {
+.area > * {
+  padding: 20px;
+}
+
+.area.top {
   margin-top: calc(47px + 0px);
+}
+
+.se-info {
+  z-index: 98;
+  background: #3DA9FC;
+  margin-bottom: -5vw;
+}
+
+.se-info::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 10px;
+  background: -webkit-gradient(linear, right top, left bottom, from(#133c55), to(#3DA9FC));
+  background: linear-gradient(to bottom left, #133c55, #3DA9FC);
+  opacity: 0.1;
+}
+
+.info {
+  color: #fffffe;
+  height: 88vh;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.46fr 1fr 48px 0.46fr;
+      grid-template-columns: 0.46fr 1fr 48px 0.46fr;
+  -ms-grid-rows: 27% 20% 50px 7% 28%;
+      grid-template-rows: 27% 20% 50px 7% 28%;
+      grid-template-areas: ". . . ." ". t . ." ". . . ." ". p p .";
+  background: url("../images/background mountain.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.se-skills {
+  z-index: 99;
+  -webkit-filter: drop-shadow(0px -2px 11px #0C2F47);
+          filter: drop-shadow(0px -2px 11px #0C2F47);
+}
+
+.skills {
+  position: relative;
+  -webkit-clip-path: polygon(0 5vw, 0 100%, 100% 100%, 100% 0);
+          clip-path: polygon(0 5vw, 0 100%, 100% 100%, 100% 0);
+  background: #094067;
+  height: 800px;
+  padding-top: calc( 5vw + 20px);
 }
 
 .section-one-wrap {
