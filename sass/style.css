@@ -214,10 +214,6 @@ header .header-center .navigation a.active {
   padding-bottom: calc( 5vw + 20px);
 }
 
-.section-enclose > * {
-  padding: 20px;
-}
-
 .section-enclose .top {
   padding-top: calc(47px + 20px);
 }
@@ -225,6 +221,7 @@ header .header-center .navigation a.active {
 .se-info {
   background: #3DA9FC;
   height: 88vh;
+  padding: 0px;
 }
 
 #info {
@@ -234,8 +231,8 @@ header .header-center .navigation a.active {
   display: grid;
   -ms-grid-columns: 0.46fr 1fr 48px 0.46fr;
       grid-template-columns: 0.46fr 1fr 48px 0.46fr;
-  -ms-grid-rows: 27% 20% 50px 7% 28%;
-      grid-template-rows: 27% 20% 50px 7% 28%;
+  -ms-grid-rows: 2fr 1fr 0.2fr 1fr 2fr;
+      grid-template-rows: 2fr 1fr 0.2fr 1fr 2fr;
       grid-template-areas: ". . . ." ". t . ." ". . . ." ". p p .";
   background: url("../images/background mountain.jpg");
   background-repeat: no-repeat;
@@ -291,6 +288,7 @@ header .header-center .navigation a.active {
 }
 
 #skills {
+  padding: 20px;
   padding-top: calc( 5vw + 20px);
   -webkit-clip-path: polygon(0 5vw, 0 100%, 100% 100%, 100% 0);
           clip-path: polygon(0 5vw, 0 100%, 100% 100%, 100% 0);
@@ -299,23 +297,25 @@ header .header-center .navigation a.active {
 }
 
 .se-portfolio {
-  -webkit-filter: drop-shadow(0px 2px 21px #01243a);
-          filter: drop-shadow(0px 2px 21px #01243a);
+  -webkit-filter: drop-shadow(0px 0px 11px #01243a);
+          filter: drop-shadow(0px 0px 11px #01243a);
   z-index: 100;
 }
 
 #portfolio {
+  padding: 20px;
   -webkit-clip-path: polygon(0 0, 0 calc(100% + 5vw), 100% 100%, 100% 5vw);
           clip-path: polygon(0 0, 0 calc(100% + 5vw), 100% 100%, 100% 5vw);
   background: #072F4B;
 }
 
 .se-experience {
-  -webkit-filter: drop-shadow(0px 2px 21px #01243a);
-          filter: drop-shadow(0px 2px 21px #01243a);
+  -webkit-filter: drop-shadow(0px -px 11px #01243a);
+          filter: drop-shadow(0px -px 11px #01243a);
 }
 
 #experience {
+  padding: 20px;
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 5vw);
           clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 5vw);
   background: #356282;
