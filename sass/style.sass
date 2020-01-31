@@ -22,15 +22,42 @@ $selection: $light-blue
 html
   scroll-behavior: smooth
   height: 100%
+  overflow: hidden
 
 body
   background-color: #f7f7f7
   margin: 0
-  //display: grid
-  //grid-template-columns: $page-colums
-  //grid-template-rows: 88vh 1fr auto
+  padding: 0
+  perspective: 1px
+  transform-style: preserve-3d
+  height: 100%
+  overflow-y: scroll
+  overflow-x: hidden
   &.modal-open
     overflow: hidden
+
+.parallax
+  box-sizing: border-box
+  min-height: 100vh
+  position: relative
+  transform-style: inherit
+  width: 100vw
+  &:before
+    background: 50% 50% / cover
+  &::before
+    bottom: 0
+    content: ''
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
+    display: block
+    background-image: url('../images/background mountain.jpg')
+    background-size: cover
+    transform-origin: center center 0
+    transform: translateZ(-1px), scale(2)
+    z-index: -1
+    min-height: 100vh
 
 ////I NAV
 ////I
@@ -99,12 +126,11 @@ header
   section
     padding-top: calc( 5vw + 20px )
     padding-bottom: calc( 5vw + 20px )
-
   .top
     padding-top: calc(47px + 20px)
 
 .se-info
-  background: $primary
+  //background: $primary
   height: 88vh
   padding: 0px
 #info
@@ -114,10 +140,7 @@ header
   grid-template-columns: 0.46fr 1fr 48px 0.46fr
   grid-template-rows: 2fr 1fr 0.2fr 1fr 2fr
   grid-template-areas: /*"h h h h"*/". . . ." ". t . ." ". . . ." ". p p ."
-  background: url('../images/background mountain.jpg')
-  background-repeat: no-repeat
-  background-position: center
-  background-size: cover
+
   .one-title
     grid-row: 2 / 3
     grid-column: 2 / 3

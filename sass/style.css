@@ -95,15 +95,56 @@
 html {
   scroll-behavior: smooth;
   height: 100%;
+  overflow: hidden;
 }
 
 body {
   background-color: #f7f7f7;
   margin: 0;
+  padding: 0;
+  -webkit-perspective: 1px;
+          perspective: 1px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 body.modal-open {
   overflow: hidden;
+}
+
+.parallax {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100vh;
+  position: relative;
+  -webkit-transform-style: inherit;
+          transform-style: inherit;
+  width: 100vw;
+}
+
+.parallax:before {
+  background: 50% 50% / cover;
+}
+
+.parallax::before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  background-image: url("../images/background mountain.jpg");
+  background-size: cover;
+  -webkit-transform-origin: center center 0;
+          transform-origin: center center 0;
+  -webkit-transform: translateZ(-1px), scale(2);
+          transform: translateZ(-1px), scale(2);
+  z-index: -1;
+  min-height: 100vh;
 }
 
 header {
@@ -219,7 +260,6 @@ header .header-center .navigation a.active {
 }
 
 .se-info {
-  background: #3DA9FC;
   height: 88vh;
   padding: 0px;
 }
@@ -234,10 +274,6 @@ header .header-center .navigation a.active {
   -ms-grid-rows: 2fr 1fr 0.2fr 1fr 2fr;
       grid-template-rows: 2fr 1fr 0.2fr 1fr 2fr;
       grid-template-areas: ". . . ." ". t . ." ". . . ." ". p p .";
-  background: url("../images/background mountain.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 #info .one-title {
