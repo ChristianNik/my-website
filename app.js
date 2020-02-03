@@ -22,6 +22,15 @@ document.addEventListener('DOMContentLoaded', event => {
     topnavMenu.classList.add('fade-down');
   });
 
+  const navLinks = document.querySelectorAll('.nav-link');
+  for (const link of navLinks) {
+    link.addEventListener('click', event => {
+      setTimeout(() => {
+        topnavMenu.classList.remove('fade-down');
+      }, 200);
+    });
+  }
+
   topnavClose.addEventListener('click', event => {
     //topnavMenu.style.display = 'none';
     topnavMenu.classList.remove('fade-down');
