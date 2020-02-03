@@ -1,0 +1,57 @@
+
+$white: #fffffe
+$dark-blue: #083555
+$light-blue:  #3DA9FC
+$darker-blue: #051e2f
+
+$primary: $light-blue
+$selection: $light-blue
+
+////I
+////I
+////I
+.modal
+    letter-spacing: 4px
+    display: block
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 1000
+    color: white
+    background: $darker-blue
+    display: grid
+    justify-content: center
+    align-content: center
+    text-align: center
+    transition: all 1000ms
+    &.fade-up
+        transform: translateY(-100%)
+        opacity: 1
+    h1
+        font-size: 2.5em
+        margin: 0px
+    p
+        margin-bottom: 30px
+    button
+        border: 0
+        padding: 12px 20px
+        min-width: 100px
+        margin: 0 auto
+        border-radius: 30px
+        font-size: 1.2em
+        font-weight: bold
+        cursor: pointer
+        transition: all 300ms
+        text-align: center
+        background-color: $dark-blue
+        color: #ffffff
+        &:hover
+            border-radius: 15px
+            transform: scale(1.1)
+        &:active
+            transform: scale(0.9)
+////I
+////I 
+////I

@@ -78,25 +78,6 @@
   height: 100%;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-}
-
-*::-moz-selection {
-  background: #3DA9FC;
-}
-
-*::selection {
-  background: #3DA9FC;
-}
-
-html {
-  scroll-behavior: smooth;
-  height: 100%;
-}
-
 .modal {
   letter-spacing: 4px;
   display: block;
@@ -160,5 +141,101 @@ html {
 .modal button:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+*::-moz-selection {
+  background: #3DA9FC;
+}
+
+*::selection {
+  background: #3DA9FC;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+}
+
+.topbar {
+  position: relative;
+  width: 100%;
+  position: fixed;
+  height: 48px;
+  background-color: #051E2F;
+  opacity: 0.85;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 25px 34px 1fr 1fr 34px 25px;
+      grid-template-columns: 25px 34px 1fr 1fr 34px 25px;
+}
+
+.topbar .topbar-logo {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  width: 34px;
+  height: 34px;
+  background-image: url("../images/Logo 1@2x.png");
+  background-size: cover;
+}
+
+.topbar .topbar-icn {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5 / 6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 34px;
+  height: 34px;
+  background-size: cover;
+  fill: #fffffe;
+}
+
+.navigation-expanded {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #094067;
+  height: 100%;
+  color: #fffffe;
+}
+
+.navigation-expanded ul {
+  display: -ms-grid;
+  display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-expanded ul a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
