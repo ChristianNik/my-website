@@ -13,52 +13,64 @@
     <title>development version</title>
   </head>
   <body class="modal-open">
-    <div class="topbar">
-      <div class="topbar-logo"></div>
-      <div id="topbar-menu" class="topbar-icn" />
-      <svg xmlns="http://www.w3.org/2000/svg" width="22.667" height="17">
-        <path
-          class="a"
-          d="M4,6H26.667V8.833H4Zm0,7.083H26.667v2.833H4Zm0,7.083H26.667V23H4Z"
-          transform="translate(-4 -6)"
-        />
-      </svg>
+    <div id="topbar" class="topbar">
+      <div class="topbar__logo"></div>
+      <div id="topbar__menu__open" class="topbar__icon topbar__menu__open">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22.667" height="17">
+          <path
+            d="M4,6H26.667V8.833H4Zm0,7.083H26.667v2.833H4Zm0,7.083H26.667V23H4Z"
+            transform="translate(-4 -6)"
+          />
+        </svg>
+      </div>
+      <div id="topbar__menu__close" class="topbar__icon topbar__menu__close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16.998">
+          <path
+            d="M21.168,6.344l-6.376,6.374L8.418,6.344,6.293,8.469l6.374,6.374L6.293,21.218l2.125,2.125,6.374-6.374,6.376,6.374,2.125-2.125-6.374-6.374,6.374-6.374Z"
+            transform="translate(-6.293 -6.344)"
+          />
+        </svg>
+      </div>
     </div>
-    <nav id="topnav-menu" class="navigation-expanded">
-      <ul>
-        <li>
-          <div class="topnav">
-            <div id="topnav-close" class="topnav-icn" />
-            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16.998">
-              <path
-                class="a"
-                d="M21.168,6.344l-6.376,6.374L8.418,6.344,6.293,8.469l6.374,6.374L6.293,21.218l2.125,2.125,6.374-6.374,6.376,6.374,2.125-2.125-6.374-6.374,6.374-6.374Z"
-                transform="translate(-6.293 -6.344)"
-              />
-            </svg>
-          </div>
-        </li>
-        <li><a class="nav-link" href="#home">home</a></li>
-        <li><a class="nav-link" href="#skills">erfahrung</a></li>
-        <li><a class="nav-link" href="#projects">projekte</a></li>
-        <li><a class="nav-link" href="#experience">erfahrung</a></li>
-        <li><a class="nav-link" href="#kontact">kontakt</a></li>
-      </ul>
-    </nav>
 
-    <!-- modal -->
     <!-- 
+      Navigation  
+    -->
+
+    <div id="navigaion" class="navigaion">
+      <ul class="navigaion__list">
+        <li><a class="navigaion__link" href="#home">home</a></li>
+        <li><a class="navigaion__link" href="#skills">erfahrung</a></li>
+        <li><a class="navigaion__link" href="#projects">projekte</a></li>
+        <li><a class="navigaion__link" href="#experience">erfahrung</a></li>
+        <li><a class="navigaion__link" href="#kontact">kontakt</a></li>
+      </ul>
+    </div>
+
+    <div style="height: 150vh;">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus illum,
+      nemo sit rerum fugit consectetur. Nam dolor magnam magni dicta quos ullam
+      beatae deserunt? Aut vitae optio quibusdam sit explicabo?
+    </div>
+
+    <!-- 
+      Modal
+      -->
+
     <div class="modal" id="modal-container">
       <h1>
         DIESE SEITE <br />BEFINDET SICH <br />
         IM AUFBAU.
       </h1>
       <p>THIS SITE IS UNDER CONSTRUCTION.</p>
-      <button id="modal-button">VERSTANDEN</button>
+      <button id="modal__button">VERSTANDEN</button>
     </div>
- -->
-    <!-- end modal -->
+
+    <!-- Modal end -->
 
     <script src="app.js"></script>
   </body>
 </html>
+<!-- modal -->
+
+<!-- end modal -->

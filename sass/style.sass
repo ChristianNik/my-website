@@ -25,73 +25,61 @@ html
 body
   margin: 0
   position: relative
-  overflow: hidden
+
 .topbar
-  position: relative
-  width: 100vw
+  z-index: 10000
+  transition: all 300ms
   position: fixed
+  width: 100vw
   height: 48px
-  background-color: #051E2F
   opacity: 0.85
   display: grid
   align-items: center
   grid-template-columns: 25px 34px 1fr 1fr 34px 25px
-  .topbar-logo
+  background-color: #051E2F
+  .topbar__logo
     grid-column: 2 / 3
     width: 34px
     height: 34px
     background-image: url("../images/Logo 1@2x.png")
     background-size: cover
-  .topbar-icn
-    cursor: pointer
+  .topbar__icon
     grid-column: 5 / 6
     display: flex
     justify-content: center
     align-items: center
+    background-size: cover
     width: 34px
     height: 34px
-    background-size: cover
+    cursor: pointer
+  .topbar__menu__open
     fill: #fffffe
     &:hover
       filter: brightness(0.8)
+  .topbar__menu__close
+    display: none
+    grid-column: 5 / 6
+    fill: #fffffe
 
-.navigation-expanded
-  border-radius: 100%
-  transform: translateX(100%) scale(0.5) translateY(-200%)
-  transition: all 400ms ease-out
-  //opacity: 0
-  //transform: scale(0)
-  z-index: 100
-  position: absolute
-  top: 0
+.navigaion
+  transition: all 500ms
+  transform: scale(0) translateY(calc(-150vh - 48px))
+  border-radius: 0px 0px 100% 100%
+  position: fixed
+  //display: none
+  top: 48px
   left: 0
   right: 0
   bottom: 0
   background-color: #094067
-  height: 100vh
+  height: 0
   color: #90B4CE
-  ul
+
+  .navigaion__list
     list-style: none
     margin: 0
     padding: 0
-    .topnav
-      height: 48px
-      display: grid
-      justify-content: end
-      align-items: center
-      padding-right: 25px
-      background-color: #005F98
-      .topnav-icn
-        cursor: pointer
-        display: flex
-        justify-content: center
-        align-items: center
-        width: 34px
-        height: 34px
-        background-size: cover
-        fill: #fffffe
-
-    a
+    .navigaion__link
       display: flex
       align-items: center
       justify-content: center
@@ -103,8 +91,12 @@ body
       &:hover,
       &:active
         background-color: #073657
-.fade-down
-  //opacity: 1
-  //transform: scale(1)
-  border-radius: 0
-  transform: translateX(0) scale(1) translateY(0)
+        color: $white
+  &.active
+    //display: block
+    transform: scale(1) translateY(0)
+    height: calc( 100vh - 48px )
+    border-radius: 0
+.fade-up
+  transform: translateY(-100%)
+  opacity: 1

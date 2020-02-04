@@ -1,10 +1,11 @@
 const body = document.querySelector('.modal-open');
-const modalButton = document.getElementById('modal-button');
+const modalButton = document.getElementById('modal__button');
 const modalContainer = document.getElementById('modal-container');
 const navigationElement = document.getElementById('nav');
 
 document.addEventListener('DOMContentLoaded', event => {
-  /*
+  console.log(modalButton);
+
   modalButton.addEventListener('click', event => {
     modalContainer.classList.add('fade-up');
     body.classList.remove('modal-open');
@@ -12,27 +13,25 @@ document.addEventListener('DOMContentLoaded', event => {
       //modalContainer.style.display = 'none';
     }, 1000);
   });
-*/
-  const topbarMenu = document.getElementById('topbar-menu');
-  const topnavMenu = document.getElementById('topnav-menu');
-  const topnavClose = document.getElementById('topnav-close');
 
-  topbarMenu.addEventListener('click', event => {
-    //topnavMenu.style.display = 'block';
-    topnavMenu.classList.add('fade-down');
+  const menuOpen = document.getElementById('topbar__menu__open');
+  const menuClose = document.getElementById('topbar__menu__close');
+  const navigation = document.getElementById('navigaion');
+  const topbar = document.getElementById('topbar');
+
+  menuOpen.addEventListener('click', event => {
+    menuOpen.style.display = 'none';
+    menuClose.style.display = 'flex';
+    //show Navigation
+    navigation.classList.add('active');
+    topbar.style.opacity = 1;
   });
 
-  const navLinks = document.querySelectorAll('.nav-link');
-  for (const link of navLinks) {
-    link.addEventListener('click', event => {
-      setTimeout(() => {
-        topnavMenu.classList.remove('fade-down');
-      }, 200);
-    });
-  }
-
-  topnavClose.addEventListener('click', event => {
-    //topnavMenu.style.display = 'none';
-    topnavMenu.classList.remove('fade-down');
+  menuClose.addEventListener('click', event => {
+    menuOpen.style.display = 'flex';
+    menuClose.style.display = 'none';
+    //hide Navigation
+    navigation.classList.remove('active');
+    topbar.style.opacity = 0.85;
   });
 });
