@@ -1,3 +1,57 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+*::-moz-selection {
+  background: #3DA9FC;
+}
+
+*::selection {
+  background: #3DA9FC;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  position: relative;
+}
+
+.section__enclose {
+  min-height: 100px;
+  color: #fffffe;
+}
+
+.se__title {
+  font-size: 23px;
+}
+
+.se--info {
+  padding-top: 48px;
+  background-color: #00000029;
+  background-image: url("../images/background mountain.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#info {
+  height: 85vh;
+}
+
+.se--skills {
+  background-color: #094067;
+}
+
+#skills {
+  padding: 10px;
+}
+
 .sozial-bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -143,28 +197,10 @@
           transform: scale(0.9);
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-}
-
-*::-moz-selection {
-  background: #3DA9FC;
-}
-
-*::selection {
-  background: #3DA9FC;
-}
-
-html {
-  scroll-behavior: smooth;
-  height: 100vh;
-}
-
-body {
-  margin: 0;
-  position: relative;
+.fade-up {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 1;
 }
 
 .topbar {
@@ -232,10 +268,10 @@ body {
 }
 
 .navigaion {
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
-  -webkit-transform: scale(0) translateY(calc(-150vh - 48px));
-          transform: scale(0) translateY(calc(-150vh - 48px));
+  -webkit-transition: all 700ms;
+  transition: all 700ms;
+  -webkit-transform: translateY(calc(-150vh - 48px));
+          transform: translateY(calc(-150vh - 48px));
   border-radius: 0px 0px 100% 100%;
   position: fixed;
   top: 48px;
@@ -266,7 +302,7 @@ body {
   text-decoration: none;
   color: inherit;
   width: 100%;
-  height: calc( (100vh - 48px) * 1/5);
+  height: 0;
   cursor: pointer;
 }
 
@@ -276,15 +312,13 @@ body {
 }
 
 .navigaion.active {
-  -webkit-transform: scale(1) translateY(0);
-          transform: scale(1) translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   height: calc( 100vh - 48px);
   border-radius: 0;
 }
 
-.fade-up {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  opacity: 1;
+.navigaion.active .navigaion__link {
+  height: calc( (100vh - 48px) * 1/5);
 }
 /*# sourceMappingURL=style.css.map */

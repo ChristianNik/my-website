@@ -1,17 +1,5 @@
-@import sozial.sass
-@import modal.sass
 ////I
-
-$page-colums: 0.46fr 1fr 48px 0.46fr
-$page-colums-mobile: 1fr
-
-$white: #fffffe
-$dark-blue: #083555
-$light-blue:  #3DA9FC
-$darker-blue: #051e2f
-
-$primary: $light-blue
-$selection: $light-blue
+@import root.sass
 
 *
   box-sizing: border-box
@@ -26,77 +14,34 @@ body
   margin: 0
   position: relative
 
-.topbar
-  z-index: 10000
-  transition: all 300ms
-  position: fixed
-  width: 100vw
-  height: 48px
-  opacity: 0.85
-  display: grid
-  align-items: center
-  grid-template-columns: 25px 34px 1fr 1fr 34px 25px
-  background-color: #051E2F
-  .topbar__logo
-    grid-column: 2 / 3
-    width: 34px
-    height: 34px
-    background-image: url("../images/Logo 1@2x.png")
-    background-size: cover
-  .topbar__icon
-    grid-column: 5 / 6
-    display: flex
-    justify-content: center
-    align-items: center
-    background-size: cover
-    width: 34px
-    height: 34px
-    cursor: pointer
-  .topbar__menu__open
-    fill: #fffffe
-    &:hover
-      filter: brightness(0.8)
-  .topbar__menu__close
-    display: none
-    grid-column: 5 / 6
-    fill: #fffffe
+.section__enclose
+  min-height: 100px
+  color: #fffffe
+.se__title
+  font-size: 23px
 
-.navigaion
-  transition: all 500ms
-  transform: scale(0) translateY(calc(-150vh - 48px))
-  border-radius: 0px 0px 100% 100%
-  position: fixed
-  //display: none
-  top: 48px
-  left: 0
-  right: 0
-  bottom: 0
+.se--info
+  padding-top: 48px
+  background-color: #00000029
+  background-image: url("../images/background mountain.jpg")
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+#info
+  height: 85vh
+
+.se--skills
+  //filter: drop-shadow(0px -2px 11px #0C2F47)
   background-color: #094067
-  height: 0
-  color: #90B4CE
+#skills
+  padding: 10px
 
-  .navigaion__list
-    list-style: none
-    margin: 0
-    padding: 0
-    .navigaion__link
-      display: flex
-      align-items: center
-      justify-content: center
-      text-decoration: none
-      color: inherit
-      width: 100%
-      height: calc( (100vh - 48px) * 1/5)
-      cursor: pointer
-      &:hover,
-      &:active
-        background-color: #073657
-        color: $white
-  &.active
-    //display: block
-    transform: scale(1) translateY(0)
-    height: calc( 100vh - 48px )
-    border-radius: 0
-.fade-up
-  transform: translateY(-100%)
-  opacity: 1
+////I
+////I
+////I
+@import sozial.sass
+@import modal.sass
+@import navigation.sass
+////I
+////I
+////I
