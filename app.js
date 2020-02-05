@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', event => {
     });
   }
 
+  const body = document.getElementById('body');
   const menuOpen = document.getElementById('topbar__menu__open');
   const menuClose = document.getElementById('topbar__menu__close');
   const navigation = document.getElementById('navigaion');
@@ -21,10 +22,12 @@ document.addEventListener('DOMContentLoaded', event => {
   const showNavigation = () => {
     navigation.classList.add('active');
     topbar.style.opacity = 1;
+    body.style.overflow = 'hidden';
   };
   const hideNavigation = () => {
     navigation.classList.remove('active');
     topbar.style.opacity = 0.85;
+    body.style.overflow = '';
   };
 
   menuOpen.addEventListener('click', event => {
