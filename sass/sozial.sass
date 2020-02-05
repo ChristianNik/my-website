@@ -1,12 +1,10 @@
 @import root.sass
-.sozial-bar
+.sozial__bar
     display: flex
-    flex-direction: column
-    align-self: flex-end
-    grid-column: 3 / 4
-    grid-row: 3 / 5
+    grid-column: 2 / 3
+    grid-row: 7 / 8
 
-.sozial-icons
+.sozial__icons
     position: relative
     width: 48px
     height: 48px
@@ -14,6 +12,7 @@
     &:hover
         filter: brightness(0.8)
     &.linkedin
+        margin-left: 20px
         background: #0076B3
         &::after
             position: absolute
@@ -26,7 +25,6 @@
             width: 100%
             height: 100%
     &.instagram
-        margin-bottom: 20px
         background: transparent linear-gradient(219deg, #71329D 0%, #9851C1 32%, #EC2135 65%, #E9C531 100%) 0% 0% no-repeat padding-box
         &::after
             position: absolute
@@ -39,7 +37,6 @@
             width: 100%
             height: 100%
     &.github
-        margin-bottom: 20px
         background: #FFFFFF
         &::after
             position: absolute

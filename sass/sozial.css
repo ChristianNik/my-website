@@ -1,38 +1,33 @@
-.sozial-bar {
+.sozial__bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  -ms-grid-column: 3;
+  -ms-grid-column: 2;
   -ms-grid-column-span: 1;
-  grid-column: 3 / 4;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 2;
-  grid-row: 3 / 5;
+  grid-column: 2 / 3;
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 1;
+  grid-row: 7 / 8;
 }
 
-.sozial-icons {
+.sozial__icons {
   position: relative;
   width: 48px;
   height: 48px;
   background: #767777;
 }
 
-.sozial-icons:hover {
+.sozial__icons:hover {
   -webkit-filter: brightness(0.8);
           filter: brightness(0.8);
 }
 
-.sozial-icons.linkedin {
+.sozial__icons.linkedin {
+  margin-left: 20px;
   background: #0076B3;
 }
 
-.sozial-icons.linkedin::after {
+.sozial__icons.linkedin::after {
   position: absolute;
   content: '';
   top: 0;
@@ -44,12 +39,11 @@
   height: 100%;
 }
 
-.sozial-icons.instagram {
-  margin-bottom: 20px;
+.sozial__icons.instagram {
   background: transparent linear-gradient(219deg, #71329D 0%, #9851C1 32%, #EC2135 65%, #E9C531 100%) 0% 0% no-repeat padding-box;
 }
 
-.sozial-icons.instagram::after {
+.sozial__icons.instagram::after {
   position: absolute;
   content: '';
   top: 0;
@@ -61,12 +55,11 @@
   height: 100%;
 }
 
-.sozial-icons.github {
-  margin-bottom: 20px;
+.sozial__icons.github {
   background: #FFFFFF;
 }
 
-.sozial-icons.github::after {
+.sozial__icons.github::after {
   position: absolute;
   content: '';
   top: 0;

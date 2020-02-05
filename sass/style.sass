@@ -25,6 +25,10 @@ body
   text-transform: uppercase
   text-align: center
 
+////I
+////I
+////I
+
 .se--info
   padding-top: 48px
   background-color: #00000029
@@ -34,6 +38,30 @@ body
   background-size: cover
 #info
   height: 85vh
+  display: grid
+  grid-template-columns: 25px 1fr 25px
+  grid-template-rows: 1fr 2fr auto 0.5fr auto 0.7fr auto 1fr
+#info__title
+  grid-row: 2 / 3
+  grid-column: 2 / 3
+  text-align: left
+  font-size: 3rem
+  text-transform: none
+  font-weight: 100
+  letter-spacing: 5px
+  display: block
+  margin: 0
+  .info__title__extra
+    font-weight: bold
+  .info__title__extra__dot
+    color: $primary
+.info__secondary
+  grid-row: 5 / 6
+  grid-column: 2 / 3
+  text-transform: uppercase
+////I
+////I
+////I
 
 .se--skills
   background-color: #094067
@@ -42,6 +70,10 @@ body
   clip-path: polygon(0 5vw, 0 100%, 100% 100%, 100% 0)
 #skills
   padding: 10px
+
+////I
+////I
+////I
 
 .se--projects
   z-index: 99
@@ -52,12 +84,20 @@ body
 #projects
   padding: 10px
 
+////I
+////I
+////I
+
 .se--experience
   background: #356282
   margin-top: -5vw
   filter: drop-shadow(0px -2px 11px #0C2F47)
 #experience
   padding: 10px
+
+////I
+////I
+////I
 
 .se--kontakt
   background: #083555
@@ -66,10 +106,27 @@ body
 #kontakt
   padding: 10px
 
+////I
+////I
+////I
+
 .se--footer
   background: #094067
   color: #fffffe
   padding: 15px
+
+////I
+////I
+////I
+
+.creator__link
+  position: absolute
+  right: 20px
+  bottom: calc(5vw + 20px)
+  color: #5F6C7B
+  text-shadow: none
+  fill: #fffffe
+  font-size: 12px
 ////I
 ////I
 ////I
