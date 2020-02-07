@@ -72,19 +72,17 @@
 }
 
 .navigaion {
-  z-index: 100;
+  z-index: 1000;
   -webkit-transition: all 700ms;
   transition: all 700ms;
   -webkit-transform: translateY(calc(-100vh - 48px));
           transform: translateY(calc(-100vh - 48px));
-  border-radius: 0px 0px 100% 100%;
   position: fixed;
   top: 48px;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: #0076B3;
-  height: 0;
   color: #fffffe;
 }
 
@@ -118,10 +116,7 @@
 
 .navigaion.active {
   z-index: 1000;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
   height: calc( 100vh - 48px);
-  border-radius: 0;
 }
 
 .navigaion.active .navigaion__link {

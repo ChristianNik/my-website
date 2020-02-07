@@ -25,14 +25,20 @@ document.addEventListener('DOMContentLoaded', event => {
   const showNavigation = () => {
     menuOpen.style.display = 'none';
     menuClose.style.display = 'flex';
-    navigation.classList.add('active');
+
+    navigation.classList.remove('slideOutUp');
+    navigation.classList.add('slideInDown');
+
     topbar.style.opacity = 1;
     body.style.overflow = 'hidden';
   };
   const hideNavigation = () => {
     menuOpen.style.display = 'flex';
     menuClose.style.display = 'none';
-    navigation.classList.remove('active');
+
+    navigation.classList.remove('slideInDown');
+    navigation.classList.add('slideOutUp');
+
     topbar.style.opacity = 0.85;
     body.style.overflow = '';
   };
