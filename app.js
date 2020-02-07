@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', event => {
     });
   }
 
+  //
+  // Navigation
+  //
   const body = document.getElementById('body');
   const menuOpen = document.getElementById('topbar__menu__open');
   const menuClose = document.getElementById('topbar__menu__close');
@@ -20,31 +23,31 @@ document.addEventListener('DOMContentLoaded', event => {
   const navLinks = document.querySelectorAll('.navigaion__link');
 
   const showNavigation = () => {
+    menuOpen.style.display = 'none';
+    menuClose.style.display = 'flex';
     navigation.classList.add('active');
     topbar.style.opacity = 1;
     body.style.overflow = 'hidden';
   };
   const hideNavigation = () => {
+    menuOpen.style.display = 'flex';
+    menuClose.style.display = 'none';
     navigation.classList.remove('active');
     topbar.style.opacity = 0.85;
     body.style.overflow = '';
   };
 
   menuOpen.addEventListener('click', event => {
-    menuOpen.style.display = 'none';
-    menuClose.style.display = 'flex';
-    //show Navigation
     showNavigation();
   });
 
   menuClose.addEventListener('click', event => {
-    menuOpen.style.display = 'flex';
-    menuClose.style.display = 'none';
-    //hide Navigation
     hideNavigation();
   });
 
   for (const link of navLinks) {
-    link.addEventListener('click', event => {});
+    link.addEventListener('click', event => {
+      hideNavigation();
+    });
   }
 });
