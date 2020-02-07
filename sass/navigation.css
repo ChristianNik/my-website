@@ -13,7 +13,7 @@
           align-items: center;
   -ms-grid-columns: 25px 34px 1fr 1fr 34px 25px;
       grid-template-columns: 25px 34px 1fr 1fr 34px 25px;
-  background-color: #051E2F;
+  background-color: #051e2f;
 }
 
 .topbar .topbar__logo {
@@ -83,9 +83,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #094067;
+  background-color: #0076B3;
   height: 0;
-  color: #90B4CE;
+  color: #fffffe;
 }
 
 .navigaion .navigaion__list {
