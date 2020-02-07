@@ -13,7 +13,7 @@
     />
     <title>development version</title>
   </head>
-  <body id="body">
+  <body id="body" class="grid--columns">
     <div id="topbar" class="topbar">
       <div class="topbar__logo"></div>
       <div id="topbar__menu__open" class="topbar__icon topbar__menu__open">
@@ -51,7 +51,7 @@
     <!-- Navigation end -->
 
     <div class="section__container container--info">
-      <section id="info" class="">
+      <section id="info" class="grid--columns">
         <h1 id="info__title" class="se__title">
           ich bin <br />
           <span class="info__title__extra"
@@ -86,7 +86,7 @@
     </div>
 
     <div class="section__container container--skills">
-      <section id="skills" class="container--area">
+      <section id="skills" class="container--padding">
         <h1 class="se__title">fähigkeiten</h1>
         <div class="skills__container">
           <section class="skills__box">
@@ -118,9 +118,9 @@
     </div>
 
     <div class="section__container container--projects">
-      <section id="projects" class="container--area">
+      <section id="projects" class="container--padding">
         <h1 class="se__title">projekte</h1>
-        <div class="projects__container">
+        <div class="projects__container grid--columns">
           <div class="projects__card one">
             <a class="card__link" href="#one">One</a>
           </div>
@@ -140,17 +140,39 @@
       </section>
     </div>
     <div class="section__container container--experience">
-      <section id="experience" class="container--area">
+      <section id="experience" class="container--padding">
         <h1 class="se__title">erfahrung</h1>
+        <div class="experience__container grid--columns">
+          <section class="experience__card">
+            <div class="card__date">2016-2019</div>
+            <h1 class="card__name">Berufskolleg Dieringhausen</h1>
+            <div class="card__graduation">
+              Abschluss zum Informationstechnischen Assistenten
+            </div>
+          </section>
+          <section class="experience__card work">
+            <div class="card__date">2016-2019</div>
+            <h1 class="card__name">Berufskolleg Dieringhausen</h1>
+            <div class="card__graduation">
+              Abschluss zum Informationstechnischen Assistenten
+            </div>
+          </section>
+          <section class="experience__card school">
+            <div class="card__date">2016-2019</div>
+            <h1 class="card__name">Berufskolleg Dieringhausen</h1>
+            <div class="card__graduation">
+              Abschluss zum Informationstechnischen Assistenten
+            </div>
+          </section>
+        </div>
       </section>
     </div>
 
     <div class="section__container container--kontact">
-      <section id="kontact" class="container--area">
+      <section id="kontact" class="container--padding">
         <h1 class="se__title">kontakt</h1>
       </section>
     </div>
-
     <footer class="container--footer">
       C
     </footer>
@@ -175,13 +197,3 @@
 <!-- modal -->
 
 <!-- end modal -->
-
-<!-- 
-  #skills
-   padding: 20px
-  padding-top: calc( 5vw + 20px)
-  clip-path: polygon(0 5vw, 0 100%, 100% 100%, 100% 0)
-  background: #094067
-  height: 800px
-  display: grid
- -->
