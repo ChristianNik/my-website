@@ -12,7 +12,7 @@ html
   height: 100vh
 body
   display: grid
-  grid-template-rows: 85vh 5.1vw auto 5.1vw 1fr 5.1vw 1fr 0.4fr 0.1fr 48px
+  grid-template-rows: 85vh 5.1vw auto 5.1vw 1fr 5.1vw 0.5fr 0.4fr 0.2fr 48px
   margin: 0
   position: relative
 
@@ -201,7 +201,35 @@ body
   grid-row: 8 / 10
   filter: drop-shadow(0px 0px 5px #083555)
 #kontact
+  grid-column: 1 / -1
+  height: 100%
   background: #083555
+  display: grid
+  grid-template-rows: auto auto 1fr
+  .kontact__title
+    grid-row: 1 / 1
+    grid-column: 1 / -1
+    margin: 0
+  .kontact__paragraph
+    grid-row: 2 / 3
+    grid-column: 2 / 3
+  .kontact__form
+    grid-row: 3 / 4
+    grid-column: 2 / 3
+    display: grid
+    grid-gap: 10px
+    textarea,
+    input
+      border: 0
+      width: 100%
+      padding: 8px 10px
+      &[type=submit]
+        text-transform: uppercase
+        background-color: #52840C
+        color: $white
+        &:disabled
+          filter: brightness(0.7)
+          color: black
 
 ////I
 ////I Footer

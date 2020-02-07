@@ -143,20 +143,6 @@
       <section id="experience" class="container--padding">
         <h1 class="se__title">erfahrung</h1>
         <div class="experience__container grid--columns">
-          <section class="experience__card">
-            <div class="card__date">2016-2019</div>
-            <h1 class="card__name">Berufskolleg Dieringhausen</h1>
-            <div class="card__graduation">
-              Abschluss zum Informationstechnischen Assistenten
-            </div>
-          </section>
-          <section class="experience__card work">
-            <div class="card__date">2016-2019</div>
-            <h1 class="card__name">Berufskolleg Dieringhausen</h1>
-            <div class="card__graduation">
-              Abschluss zum Informationstechnischen Assistenten
-            </div>
-          </section>
           <section class="experience__card school">
             <div class="card__date">2016-2019</div>
             <h1 class="card__name">Berufskolleg Dieringhausen</h1>
@@ -169,8 +155,16 @@
     </div>
 
     <div class="section__container container--kontact">
-      <section id="kontact" class="container--padding">
-        <h1 class="se__title">kontakt</h1>
+      <section id="kontact" class="container--padding grid--columns">
+        <h1 class="se__title kontact__title">kontakt</h1>
+        <p class="kontact__paragraph">Kontaktiere mich jederzeit.</p>
+        <form class="kontact__form" action="#">
+          <input type="text" placeholder="Name" />
+          <input type="text" placeholder="Email" />
+          <input type="text" placeholder="Telefon" />
+          <textarea cols="30" rows="10" placeholder="Nachricht"></textarea>
+          <input type="submit" value="kontaktieren" disabled />
+        </form>
       </section>
     </div>
     <footer class="container--footer">
