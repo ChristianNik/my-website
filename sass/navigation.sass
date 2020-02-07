@@ -57,6 +57,7 @@
         margin: 0
         padding: 0
         .navigaion__link
+            transition: all 100ms
             display: flex
             align-items: center
             justify-content: center
@@ -67,7 +68,7 @@
             cursor: pointer
             &:hover,
             &:active
-                background-color: #073657
+                background-color: $nav-hover
                 color: $white
     &.active
         z-index: 1000

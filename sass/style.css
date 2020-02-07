@@ -304,7 +304,7 @@ body {
   bottom: 0;
   z-index: 1000000000;
   color: white;
-  background: #051e2f;
+  background: #083555;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -344,7 +344,7 @@ body {
   -webkit-transition: all 300ms;
   transition: all 300ms;
   text-align: center;
-  background-color: #083555;
+  background-color: #051e2f;
   color: #ffffff;
 }
 
@@ -460,6 +460,8 @@ body {
 }
 
 .navigaion .navigaion__list .navigaion__link {
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -477,7 +479,7 @@ body {
 }
 
 .navigaion .navigaion__list .navigaion__link:hover, .navigaion .navigaion__list .navigaion__link:active {
-  background-color: #073657;
+  background-color: #45aaf8;
   color: #fffffe;
 }
 

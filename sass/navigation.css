@@ -93,6 +93,8 @@
 }
 
 .navigaion .navigaion__list .navigaion__link {
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,7 +112,7 @@
 }
 
 .navigaion .navigaion__list .navigaion__link:hover, .navigaion .navigaion__list .navigaion__link:active {
-  background-color: #073657;
+  background-color: #45aaf8;
   color: #fffffe;
 }
 
