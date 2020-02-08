@@ -1,3 +1,4 @@
+'use strict';
 const modalButton = document.getElementById('modal__button');
 const modalContainer = document.getElementById('modal-container');
 const navigationElement = document.getElementById('nav');
@@ -20,7 +21,8 @@ document.addEventListener('DOMContentLoaded', event => {
   const menuClose = document.getElementById('topbar__menu__close');
   const navigation = document.getElementById('navigaion');
   const topbar = document.getElementById('topbar');
-  const navLinks = document.querySelectorAll('.navigaion__link');
+  const navLinksMobile = document.querySelectorAll('.navigaion__link');
+  const navLinksDesktop = document.querySelectorAll('.topbar__link');
 
   const showNavigation = () => {
     menuOpen.style.display = 'none';
@@ -43,6 +45,14 @@ document.addEventListener('DOMContentLoaded', event => {
     body.style.overflow = '';
   };
 
+  const changeActive = aktiveLink => {
+    navLinksDesktop.forEach(value => {
+      value === aktiveLink
+        ? value.classList.add('active')
+        : value.classList.remove('active');
+    });
+  };
+
   menuOpen.addEventListener('click', event => {
     showNavigation();
   });
@@ -51,9 +61,15 @@ document.addEventListener('DOMContentLoaded', event => {
     hideNavigation();
   });
 
-  for (const link of navLinks) {
+  for (const link of navLinksMobile) {
     link.addEventListener('click', event => {
       hideNavigation();
+    });
+  }
+
+  for (const link of navLinksDesktop) {
+    link.addEventListener('click', event => {
+      changeActive(event.target);
     });
   }
 });
