@@ -21,8 +21,8 @@ html {
 body {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 85vh 5.1vw auto 5.1vw 1fr 5.1vw 0.5fr 0.4fr 0.2fr 48px;
-      grid-template-rows: 85vh 5.1vw auto 5.1vw 1fr 5.1vw 0.5fr 0.4fr 0.2fr 48px;
+  -ms-grid-rows: 85vh 5.1vw auto 5.1vw 1fr 5.1vw 0.5fr auto auto 48px;
+      grid-template-rows: 85vh 5.1vw auto 5.1vw 1fr 5.1vw 0.5fr auto auto 48px;
   margin: 0;
   position: relative;
 }
@@ -335,9 +335,12 @@ body {
 #kontact {
   grid-column: 1 / -1;
   height: 100%;
+  padding: 30px 0px;
   background: #083555;
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 5fr 1fr;
+      grid-template-columns: 1fr 5fr 1fr;
   -ms-grid-rows: auto auto 1fr;
       grid-template-rows: auto auto 1fr;
 }
@@ -356,6 +359,8 @@ body {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
+  text-align: center;
+  color: #90B4CE;
 }
 
 #kontact .kontact__form {
@@ -375,6 +380,7 @@ body {
   border: 0;
   width: 100%;
   padding: 8px 10px;
+  border-radius: 2px;
 }
 
 #kontact .kontact__form textarea[type=submit],
@@ -382,6 +388,9 @@ body {
   text-transform: uppercase;
   background-color: #52840C;
   color: #fffffe;
+  width: auto;
+  margin: 0 auto;
+  border-radius: 20px;
 }
 
 #kontact .kontact__form textarea[type=submit]:disabled,
@@ -711,6 +720,39 @@ body {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     grid-gap: 15px;
+  }
+  #kontact {
+    -ms-grid-columns: 25px auto 2fr 25px;
+        grid-template-columns: 25px auto 2fr 25px;
+    -ms-grid-rows: auto 1fr auto;
+        grid-template-rows: auto 1fr auto;
+    margin: 0;
+    padding: 30px 50px;
+  }
+  #kontact .kontact__title {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+  }
+  #kontact .kontact__paragraph {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+  }
+  #kontact .kontact__form {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / 3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    margin-left: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */
