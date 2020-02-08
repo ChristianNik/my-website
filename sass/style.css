@@ -41,7 +41,7 @@ body {
 }
 
 .section__container .se__title {
-  font-size: 23px;
+  font-size: 2em;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 2px;
@@ -130,6 +130,14 @@ body {
   display: grid;
 }
 
+#skills .skills__container .box_container {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  display: -ms-grid;
+  display: grid;
+}
+
 #skills .skills__container .skills__box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -188,10 +196,15 @@ body {
   grid-gap: 0px;
 }
 
-#projects .projects__container .projects__card {
+#projects .projects__container .card__container {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
+  display: -ms-grid;
+  display: grid;
+}
+
+#projects .projects__container .projects__card {
   min-height: 200px;
   background-color: #90B4CE;
   display: -ms-grid;
@@ -681,5 +694,23 @@ body {
 
 .navigaion.active .navigaion__link {
   height: calc( (100vh - 48px) * 1/5);
+}
+
+@media screen and (min-width: 900px) {
+  .grid--columns {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 4fr 1fr;
+        grid-template-columns: 1fr 4fr 1fr;
+  }
+  .box_container {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .card__container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
