@@ -249,12 +249,18 @@ body
 ////I
 ////I Footer
 ////I
-.container--footer
+.container__footer
   grid-column: 1 / -1
   grid-row: 11 / 12
   background: #083555
   color: #fffffe
   height: 48px
+  .footer__content
+    color: $text-secondary
+    grid-column: 2 / 3
+    display: grid
+    justify-content: center
+    align-items: center
 ////I
 ////I Ersteller Link
 ////I
