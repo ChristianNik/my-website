@@ -10,6 +10,10 @@
   grid-row: 7 / 8;
 }
 
+.sozial__bar a {
+  margin-right: 20px;
+}
+
 .sozial__icons {
   position: relative;
   width: 48px;
@@ -23,7 +27,6 @@
 }
 
 .sozial__icons.linkedin {
-  margin-left: 20px;
   background: #0076B3;
 }
 

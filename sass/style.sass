@@ -6,7 +6,9 @@
   font-family: 'Roboto', sans-serif
   &::selection
     background: $selection
-
+  &:focus
+    outline: none
+    box-shadow: 0 0 0 2px $focus
 html
   scroll-behavior: smooth
   height: 100vh
@@ -123,34 +125,44 @@ body
   .projects__container
     display: grid
     grid-gap: 0px
-    .card__container
+    .projects__item
       grid-column: 2 / 3
       display: grid
-    .projects__card
-      min-height: 200px
-      background-color: $light-gray
-      display: grid
+    .item__title
+      text-align: center
+    .item__image
       width: 100%
-      background-image: url("../images/bx-image.svg")
-      background-position: center
-      background-repeat: no-repeat
-      background-size: 100px
-      .card__link
-        display: grid
-        justify-items: center
-        align-items: center
-        color: inherit
-        text-decoration: none
-        width: 100%
-        height: 100%
-      &.one
-        background-color: #094067
-      &.two
-        background-color: #356282
-      &.three
-        background-color: #5F6C7B
-      &.four
-        background-color: #083555
+    .item__description
+      color: $text-secondary
+      text-align: center
+    .item__title_second
+      text-align: center
+    .item__software__container
+      display: grid
+      grid-auto-flow: column
+      justify-content: center
+      grid-gap: 15px
+    .software__icon
+      background-color: red
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 48px
+      height: 48px
+      &.cSharp
+        background-color: #6A1E78
+        font-size: 1.5em
+      &.mysql
+        background-color: #FFFFFE
+        font-size: 0.9em
+        .icon__word__a
+          color: #006389
+        .icon__word__b
+          color: #E08A2B
+    .item__controls__container
+      margin: 30px 0
+      display: grid
+      grid-gap: 15px
 ////I
 ////I Erfahrung
 ////I
@@ -286,6 +298,25 @@ body
   fill: #fffffe
   font-size: 12px
 
+////I
+////I Buttonsecondarygreen
+////I
+.btn
+  border: 0
+  padding: 11px 5px
+  border-radius: 99px
+  text-transform: uppercase
+  font-size: 1.2em
+  text-decoration: none
+  color: #000000
+  text-align: center
+  &--primary
+    color: $white
+    background-color: $primary
+  &--secondary
+    background-color: transparent
+    border: 2px solid $primary
+    color: $primary
 ////I
 ////I
 ////I
