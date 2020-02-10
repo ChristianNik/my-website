@@ -156,7 +156,13 @@ body {
 }
 
 #skills .skills__container .box__icons {
-  font-size: 1.75rem;
+  fill: #3DA9FC;
+}
+
+#skills .skills__container .box__icons svg {
+  font-size: 2em;
+  width: 34px;
+  height: 34px;
 }
 
 #skills .skills__container .box__title {
@@ -277,20 +283,30 @@ body {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
+  position: relative;
   top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   display: block;
-  content: '🏫';
-  font-size: 2em;
+  content: url("../images/bxs-school.svg");
+  width: 48px;
+  height: 48px;
 }
 
 #experience .experience__container .experience__card.work::before {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
+  position: relative;
   top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   display: block;
-  content: '💼';
-  font-size: 2em;
+  content: url("../images/bx-building.svg");
+  width: 48px;
+  height: 48px;
 }
 
 #experience .experience__container .experience__card:not(work)::before, #experience .experience__container .experience__card:not(school)::before {

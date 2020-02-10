@@ -94,7 +94,11 @@ body
       text-align: center
       margin-bottom: 15px
     .box__icons
-      font-size: 1.75rem
+      fill: $primary
+      svg
+        font-size: 2em
+        width: 34px
+        height: 34px
     .box__title
       margin: 0
       color: $text-secondary
@@ -167,17 +171,26 @@ body
       &.school
         &::before
           grid-column: 2 / 3
+          position: relative
           top: 0
+          left: 50%
+          transform: translateX(-50%)
+
           display: block
-          content: '🏫'
-          font-size: 2em
+          content: url("../images/bxs-school.svg")
+          width: 48px
+          height: 48px
       &.work
         &::before
           grid-column: 2 / 3
+          position: relative
           top: 0
+          left: 50%
+          transform: translateX(-50%)
           display: block
-          content: '💼'
-          font-size: 2em
+          content: url("../images/bx-building.svg")
+          width: 48px
+          height: 48px
       &:not(work),
       &:not(school)
         &::before
