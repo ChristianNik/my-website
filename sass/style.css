@@ -52,6 +52,7 @@ body {
 }
 
 .section__container .se__title {
+  margin-top: 0;
   font-size: 2em;
   text-transform: uppercase;
   text-align: center;
@@ -483,6 +484,17 @@ body {
   text-shadow: none;
   fill: #fffffe;
   font-size: 12px;
+}
+
+.creator__link::after {
+  position: relative;
+  bottom: -2px;
+  display: inline-block;
+  content: '';
+  width: 1.3em;
+  height: 1.3em;
+  background-image: url("../images/bx-link-external-light.svg");
+  background-size: contain;
 }
 
 .btn {

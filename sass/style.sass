@@ -30,6 +30,7 @@ body
   min-height: 100px
   color: #fffffe
   .se__title
+    margin-top: 0
     font-size: 2em
     text-transform: uppercase
     text-align: center
@@ -286,6 +287,7 @@ body
     display: grid
     justify-content: center
     align-items: center
+
 ////I
 ////I Ersteller Link
 ////I
@@ -297,6 +299,15 @@ body
   text-shadow: none
   fill: #fffffe
   font-size: 12px
+  &::after
+    position: relative
+    bottom: -2px
+    display: inline-block
+    content: ''
+    width: 1.3em
+    height: 1.3em
+    background-image: url("../images/bx-link-external-light.svg")
+    background-size: contain
 
 ////I
 ////I Buttonsecondarygreen
