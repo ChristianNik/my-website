@@ -56,7 +56,7 @@ body
 #info
   height: 80vh
   display: grid
-  grid-template-rows: 1fr 2fr auto 0.5fr auto 0.7fr auto 1fr
+  grid-template-rows: 1fr auto auto 0.5fr auto 0.7fr auto 1fr
 #info__title
   grid-row: 2 / 3
   grid-column: 2 / 3
@@ -67,6 +67,7 @@ body
   letter-spacing: 5px
   display: block
   margin: 0
+  text-shadow: 3px 6px 0px $black
   .info__title__extra
     font-weight: bold
   .info__title__extra__dot
@@ -128,7 +129,7 @@ body
   clip-path: polygon(0 0, 0 calc(100% - 5vw), 100% 100%, 100% 5vw)
   .projects__container
     display: grid
-    grid-gap: 0px
+    grid-row-gap: 35px
     .projects__item
       grid-column: 2 / 3
       display: grid
@@ -341,23 +342,37 @@ body
 @import modal.sass
 @import navigation.sass
 ////I
-////I
+////I Responsive Layout
 ////I
 
-@media screen and ( min-width: 900px )
+// Layout
+@media screen and ( min-width: 800px )
   .grid--columns
     display: grid
     grid-template-columns: 1fr 4fr 1fr
-  .box_container
-    grid-template-columns: 1fr 1fr 1fr
-  .card__container
-    grid-template-columns: 1fr 1fr
-    grid-gap: 15px
+
+// Navigation
+@media screen and ( min-width: 600px )
   .topbar
     .topbar__menu__open
       display: none
     .topbar__navigation
       display: flex
+
+// Info Schrift
+@media screen and ( min-width: 600px )
+  #info__title
+    font-size: 4rem
+  .info__secondary
+    font-size: 1.1rem
+
+// Section Fähikteiten
+@media screen and ( min-width: 700px )
+  .box_container
+    grid-template-columns: 1fr 1fr 1fr
+
+// Section Projekt 
+@media screen and ( min-width: 800px )
   #projects
     .btn
       width: 160px
@@ -393,6 +408,8 @@ body
         grid-row: 3 / 4
       .item__software__container
         justify-content: start
+
+@media screen and ( min-width: 900px )
   #contact
     margin: 0
     padding: 80px 50px
