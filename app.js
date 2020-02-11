@@ -72,4 +72,12 @@ document.addEventListener('DOMContentLoaded', event => {
       changeActive(event.target);
     });
   }
+
+  //
+  // Image click
+  //
+  const projectImage = document.getElementById('project__image');
+  projectImage.addEventListener('click', () => {
+    alert('Diese Funktion ist noch nicht verfügbar.');
+  });
 });
