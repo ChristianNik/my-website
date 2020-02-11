@@ -1,16 +1,20 @@
 'use strict';
-const modalButton = document.getElementById('modal__button');
-const modalContainer = document.getElementById('modal-container');
+const modalCloseButtons = document.querySelectorAll('.modal__close');
 const navigationElement = document.getElementById('nav');
 
 document.addEventListener('DOMContentLoaded', event => {
-  if (modalButton) {
-    modalButton.addEventListener('click', event => {
-      modalContainer.classList.add('fade-up');
-      setTimeout(() => {
-        //modalContainer.style.display = 'none';
-      }, 1000);
-    });
+  //
+  // Modal
+  //
+  if (modalCloseButtons) {
+    for (const button of modalCloseButtons) {
+      button.addEventListener('click', event => {
+        button.parentElement.classList.add('fade-up');
+        setTimeout(() => {
+          button.parentElement.classList.remove('active');
+        }, 1000);
+      });
+    }
   }
 
   //
@@ -76,8 +80,11 @@ document.addEventListener('DOMContentLoaded', event => {
   //
   // Image click
   //
-  const projectImage = document.getElementById('project__image');
-  projectImage.addEventListener('click', () => {
-    alert('Diese Funktion ist noch nicht verfügbar.');
-  });
+  const projectImage = document.getElementById('image001');
+
+  if (projectImage) {
+    projectImage.addEventListener('click', () => {
+      alert('Diese Funktion ist noch nicht verfügbar.');
+    });
+  }
 });

@@ -6,9 +6,6 @@
   font-family: 'Roboto', sans-serif
   &::selection
     background: $selection
-  &:focus
-    outline: none
-    box-shadow: 0 0 0 2px $focus
 html
   scroll-behavior: smooth
   height: 100vh
@@ -343,6 +340,8 @@ body
     .topbar__navigation
       display: flex
   #projects
+    .btn
+      width: 160px
     .projects__item
       grid-template-columns: auto auto
       grid-template-rows: auto auto auto 1fr
@@ -372,8 +371,6 @@ body
         grid-row: 3 / 4
       .item__software__container
         justify-content: start
-      .btn--secondary
-        width: 160px
   #contact
     margin: 0
     padding: 80px 50px

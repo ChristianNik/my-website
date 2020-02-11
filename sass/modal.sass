@@ -4,30 +4,20 @@
 ////I
 ////I
 .modal
-    letter-spacing: 4px
-    display: block
+    z-index: 1000000000
     position: fixed
     top: 0
     left: 0
     right: 0
     bottom: 0
-    z-index: 1000000000
     color: white
     background: $darker-blue
-    display: grid
+    display: none
     justify-content: center
     align-content: center
     text-align: center
     transition: all 1000ms
-    &.fade-up
-        transform: translateY(-100%)
-        opacity: 1
-    h1
-        font-size: 2.5em
-        margin: 0px
-    p
-        margin-bottom: 30px
-    button
+    .modal__close
         border: 0
         padding: 12px 20px
         min-width: 100px
@@ -43,11 +33,23 @@
         &:hover
             border-radius: 15px
             transform: scale(1.1)
-        &:active
-            transform: scale(0.9)
-.fade-up
-    transform: translateY(-100%)
-    opacity: 1
+            &:active
+                transform: scale(0.9)
+    h1
+        font-size: 2.5em
+        margin: 0px
+    &.active
+        display: grid
+        &--underconstuction
+            letter-spacing: 4px
+        p
+            margin-bottom: 30px
+        &--image
+            grid-template-rows: 1fr 1fr
+
 ////I
 ////I 
 ////I
+.fade-up
+    transform: translateY(-100%)
+    opacity: 1

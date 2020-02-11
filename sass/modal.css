@@ -1,16 +1,13 @@
 .modal {
-  letter-spacing: 4px;
-  display: block;
+  z-index: 1000000000;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1000000000;
   color: white;
   background: #083555;
-  display: -ms-grid;
-  display: grid;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -21,22 +18,7 @@
   transition: all 1000ms;
 }
 
-.modal.fade-up {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  opacity: 1;
-}
-
-.modal h1 {
-  font-size: 2.5em;
-  margin: 0px;
-}
-
-.modal p {
-  margin-bottom: 30px;
-}
-
-.modal button {
+.modal .modal__close {
   border: 0;
   padding: 12px 20px;
   min-width: 100px;
@@ -52,15 +34,38 @@
   color: #ffffff;
 }
 
-.modal button:hover {
+.modal .modal__close:hover {
   border-radius: 15px;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.modal button:active {
+.modal .modal__close:hover:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+}
+
+.modal h1 {
+  font-size: 2.5em;
+  margin: 0px;
+}
+
+.modal.active {
+  display: -ms-grid;
+  display: grid;
+}
+
+.modal.active--underconstuction {
+  letter-spacing: 4px;
+}
+
+.modal.active p {
+  margin-bottom: 30px;
+}
+
+.modal.active--image {
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
 }
 
 .fade-up {
