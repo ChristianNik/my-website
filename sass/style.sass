@@ -133,42 +133,52 @@ body
     .projects__item
       grid-column: 2 / 3
       display: grid
-    .item__title
-      text-align: center
-    .item__image
-      width: 100%
-    .item__description
-      color: $text-secondary
-      text-align: center
-    .item__title_second
-      text-align: center
-    .item__software__container
-      display: grid
-      grid-auto-flow: column
-      justify-content: center
-      grid-gap: 15px
-    .software__icon
-      background-color: red
-      display: flex
-      justify-content: center
-      align-items: center
-      width: 48px
-      height: 48px
-      &.cSharp
-        background-color: #6A1E78
-        font-size: 1.5em
-      &.mysql
-        background-color: #FFFFFE
-        font-size: 0.9em
-        .icon__word__a
-          color: #006389
-        .icon__word__b
-          color: #E08A2B
-    .item__controls__container
-      margin: 15px 0
-      display: grid
-      align-content: start
-      grid-gap: 15px
+      .item__title
+        text-align: center
+        span
+          font-size: 0.7em
+          color: $text-secondary
+      .item__image
+        width: 100%
+      .item__description
+        color: $text-secondary
+        text-align: center
+      .item__title_second
+        text-align: center
+      .item__software__container
+        display: grid
+        grid-auto-flow: column
+        justify-content: center
+        grid-gap: 15px
+      .software__icon
+        background-color: red
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 48px
+        height: 48px
+        &.cSharp
+          background-color: #6A1E78
+        &.mysql
+          background-color: #FFFFFE
+          .icon__word__a
+            color: #006389
+          .icon__word__b
+            color: #E08A2B
+        &.html
+          background-color: #E83E35
+          color: #000000
+        &.css
+          background-color: #3F9CE8
+          color: #000000
+        &.javascript
+          background-color: #FFCA28
+          color: #000000
+      .item__controls__container
+        margin: 15px 0
+        display: grid
+        align-content: start
+        grid-gap: 15px
 
 ////I
 ////I Erfahrung
@@ -353,6 +363,7 @@ body
   bottom: 25px
   z-index: 900
   transition: all 300ms
+  &:focus,
   &:hover
     animation: top_down 500ms infinite alternate
 
@@ -360,7 +371,7 @@ body
   0%
     background-position: center
   100%
-    background-position: 50% -1px
+    background-position: 50% 15%
 
 ////I
 ////I
@@ -403,39 +414,74 @@ body
   #projects
     .btn
       width: 160px
-    .projects__item
-      grid-template-columns: auto auto
-      grid-template-rows: auto auto auto 1fr
-      grid-gap: 15px
-      .item__title
-        margin: 0
-        grid-row: 1 / 2
-        grid-column: 1 / -1
-        text-align: left
-      picture
-        grid-row: 2 / 5
-        grid-column: 1 / 2
-        display: grid
-      .item__image
-        max-width: 600px
-        min-width: 500px
-      .item__description
-        margin: 0
-        grid-column: 2 / 3
-        grid-row: 4 / 5
-        text-align: left
-      .item__software
-        grid-column: 2 / 3
-        grid-row: 2 / 3
-      .item__title_second
-        margin-top: 0
-        text-align: left
-      .item__controls__container
-        grid-column: 2 / 3
-        grid-row: 3 / 4
-      .item__software__container
-        justify-content: start
+    .projects__container
+      .projects__item
+        grid-template-columns: auto auto
+        grid-template-rows: auto auto auto 1fr
+        grid-gap: 15px
+        .item__title
+          margin: 0
+          grid-row: 1 / 2
+          grid-column: 1 / -1
+          text-align: left
+        picture
+          grid-row: 2 / 5
+          grid-column: 1 / 2
+          display: grid
+        .item__image
+          max-width: 600px
+          min-width: 500px
+        .item__description
+          margin: 0
+          grid-column: 2 / 3
+          grid-row: 4 / 5
+          text-align: left
+        .item__software
+          grid-column: 2 / 3
+          grid-row: 2 / 3
+        .item__title_second
+          margin-top: 0
+          text-align: left
+        .item__controls__container
+          grid-column: 2 / 3
+          grid-row: 3 / 4
+        .item__software__container
+          justify-content: start
+        &.right
+          grid-template-columns: auto auto
+          grid-template-rows: auto auto auto 1fr
+          grid-gap: 15px
+          .item__title
+            margin: 0
+            grid-row: 1 / 2
+            grid-column: 1 / -1
+            text-align: right
+          picture
+            grid-row: 2 / 5
+            grid-column: 2 / 3
+            display: grid
+          .item__image
+            max-width: 600px
+            min-width: 500px
+          .item__description
+            margin: 0
+            grid-column: 1 / 2
+            grid-row: 4 / 5
+            text-align: right
+          .item__software
+            grid-column: 1 / 2
+            grid-row: 2 / 3
+          .item__title_second
+            margin-top: 0
+            text-align: right
+          .item__controls__container
+            grid-column: 1 / 2
+            grid-row: 3 / 4
+            justify-content: end
+          .item__software__container
+            justify-content: end
 
+// Section Kontakt
 @media screen and ( min-width: 900px )
   #contact
     margin: 0

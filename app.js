@@ -80,12 +80,14 @@ document.addEventListener('DOMContentLoaded', event => {
   //
   // Image click
   //
-  const projectImage = document.getElementById('image001');
+  const projectImage = document.querySelectorAll('.item__image');
 
   if (projectImage) {
-    projectImage.addEventListener('click', () => {
-      alert('Diese Funktion ist noch nicht verfügbar.');
-    });
+    for (const image of projectImage) {
+      image.addEventListener('click', () => {
+        alert('Diese Funktion ist noch nicht verfügbar.');
+      });
+    }
   }
 
   //
