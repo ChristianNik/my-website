@@ -972,8 +972,8 @@ body {
     width: 160px;
   }
   #projects .projects__container .projects__item {
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
+    -ms-grid-columns: 1fr auto;
+        grid-template-columns: 1fr auto;
     -ms-grid-rows: auto auto auto 1fr;
         grid-template-rows: auto auto auto 1fr;
     grid-gap: 15px;
@@ -995,9 +995,10 @@ body {
     grid-column: 1 / 2;
     display: -ms-grid;
     display: grid;
+    width: auto;
   }
   #projects .projects__container .projects__item .item__image {
-    max-width: 600px;
+    max-width: 700px;
     min-width: 500px;
   }
   #projects .projects__container .projects__item .item__description {
