@@ -87,4 +87,21 @@ document.addEventListener('DOMContentLoaded', event => {
       alert('Diese Funktion ist noch nicht verfügbar.');
     });
   }
+
+  //
+  // To Top Button
+  //
+  const toTopButton = document.getElementById('toTop');
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  document.addEventListener('scroll', () => {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      toTopButton.style.display = 'block';
+    } else {
+      toTopButton.style.display = 'none';
+    }
+  });
 });
