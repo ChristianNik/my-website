@@ -128,9 +128,8 @@
   padding: 5px 10px;
 }
 
-.topbar .topbar__navigation .topbar__link.active {
-  color: #45aaf8;
-  font-weight: bold;
+.topbar .topbar__navigation .topbar__link:active {
+  color: #fffffe;
 }
 
 .navigaion {
