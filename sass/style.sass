@@ -306,38 +306,47 @@ body
 #contact
   grid-column: 1 / -1
   height: 100%
-  padding: 30px 0px
+  padding: 50px 0px
   background: #083555
   display: grid
-  .contact__wrapper
+  .contact__container
     display: grid
     grid-template-columns: 1fr 5fr 1fr
-    grid-template-rows: auto auto 1fr
-  .contact__title
-    grid-row: 1 / 1
-    grid-column: 1 / -1
-    margin: 0
-  .contact__paragraph
-    grid-row: 2 / 3
-    grid-column: 2 / 3
-    text-align: center
-    color: $text-secondary
-  .contact__form
-    grid-row: 3 / 4
-    grid-column: 2 / 3
-    display: grid
-    grid-gap: 10px
-    textarea,
-    input
-      &:not([type=submit])
-        border: 0
-        width: 100%
-        padding: 8px 10px
-        border-radius: 2px
-      &:disabled
-        cursor: not-allowed
-        filter: brightness(0.5)
-
+    .contact_title
+      grid-column: 2 / 3
+      text-align: center
+      font-weight: 100
+      font-size: 1.5em
+    .sozial__container
+      grid-row: 2 / 3
+      grid-column: 2 / 3
+      display: grid
+      justify-content: center
+      grid-auto-flow: column
+      grid-gap: 20px
+      .icn
+        width: 48px
+        height: 48px
+        background: #094067
+        border-radius: 50%
+        &.icn--github
+          &::after
+            display: block
+            content: ''
+            height: 100%
+            width: 100%
+            background: url("../images/bxl-github-light.svg")
+            background-repeat: no-repeat
+            background-position: center
+        &.icn--linkedin
+          &::after
+            display: block
+            content: ''
+            height: 100%
+            width: 100%
+            background: url("../images/bxl-linkedin.svg")
+            background-repeat: no-repeat
+            background-position: center
 ////I
 ////I Footer
 ////I
@@ -376,7 +385,7 @@ body
     background-size: contain
 
 ////I
-////I Buttonsecondarygreen
+////I Button
 ////I
 .btn
   border: 0
@@ -442,14 +451,15 @@ body
   .grid--columns
     display: grid
     grid-template-columns: 1fr 4fr 1fr
-
+  .container--experience
+    padding-bottom: 0px
 @media screen and ( min-width: 1500px )
   .grid--columns
     grid-template-columns: 1fr 1000px 1fr
 
 // Navigation
-
 $nav_min_height: 600px
+
 // ? Mobile ? Menu-Icons: visible : Menu-Icons: not-visible 
 @media screen and ( min-width: $nav_min_height + 1)
   .topbar
@@ -585,7 +595,6 @@ $nav_min_height: 600px
 @media screen and ( min-width: 900px )
   #contact
     margin: 0
-    padding: 80px 50px
     .contact__wrapper
       grid-template-columns: 1fr 1fr
       grid-template-rows: auto 1fr auto

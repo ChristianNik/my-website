@@ -502,64 +502,69 @@ body {
 #contact {
   grid-column: 1 / -1;
   height: 100%;
-  padding: 30px 0px;
+  padding: 50px 0px;
   background: #083555;
   display: -ms-grid;
   display: grid;
 }
 
-#contact .contact__wrapper {
+#contact .contact__container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 5fr 1fr;
       grid-template-columns: 1fr 5fr 1fr;
-  -ms-grid-rows: auto auto 1fr;
-      grid-template-rows: auto auto 1fr;
 }
 
-#contact .contact__title {
-  -ms-grid-row: 1;
-  grid-row: 1 / 1;
-  grid-column: 1 / -1;
-  margin: 0;
+#contact .contact__container .contact_title {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  text-align: center;
+  font-weight: 100;
+  font-size: 1.5em;
 }
 
-#contact .contact__paragraph {
+#contact .contact__container .sozial__container {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
-  text-align: center;
-  color: #90B4CE;
-}
-
-#contact .contact__form {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3 / 4;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
   display: -ms-grid;
   display: grid;
-  grid-gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-auto-flow: column;
+  grid-gap: 20px;
 }
 
-#contact .contact__form textarea:not([type=submit]),
-#contact .contact__form input:not([type=submit]) {
-  border: 0;
+#contact .contact__container .sozial__container .icn {
+  width: 48px;
+  height: 48px;
+  background: #094067;
+  border-radius: 50%;
+}
+
+#contact .contact__container .sozial__container .icn.icn--github::after {
+  display: block;
+  content: '';
+  height: 100%;
   width: 100%;
-  padding: 8px 10px;
-  border-radius: 2px;
+  background: url("../images/bxl-github-light.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-#contact .contact__form textarea:disabled,
-#contact .contact__form input:disabled {
-  cursor: not-allowed;
-  -webkit-filter: brightness(0.5);
-          filter: brightness(0.5);
+#contact .contact__container .sozial__container .icn.icn--linkedin::after {
+  display: block;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: url("../images/bxl-linkedin.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .container__footer {
@@ -841,6 +846,9 @@ body {
     -ms-grid-columns: 1fr 4fr 1fr;
         grid-template-columns: 1fr 4fr 1fr;
   }
+  .container--experience {
+    padding-bottom: 0px;
+  }
 }
 
 @media screen and (min-width: 1500px) {
@@ -1070,7 +1078,6 @@ body {
 @media screen and (min-width: 900px) {
   #contact {
     margin: 0;
-    padding: 80px 50px;
   }
   #contact .contact__wrapper {
     -ms-grid-columns: 1fr 1fr;
