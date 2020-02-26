@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', event => {
 	}
 
 	//
-	// To Top Button
+	// To-Top Button
 	//
 	const toTopButton = document.getElementById('toTop');
 

@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "root.sass"
+        "../sass/root.sass"
     ],
     "names": [],
-    "file": "root.css"
+    "file": "root.min.css"
 }
