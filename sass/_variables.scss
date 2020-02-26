@@ -1,0 +1,30 @@
+$white: #fffffe;
+$black: #000000;
+$light-blue-a:  #3DA9FC;
+$light-blue-b: #0076B3;
+$darker-blue: #083555;
+$dark-blue: #051e2f;
+$light-gray: #90B4CE;
+$orange: #FC903D;
+$dark-blue-2: #072F4B;
+
+$primary: $light-blue-a;
+$selection: $light-blue-a;
+$focus: $orange;
+$text-secondary: $light-gray;
+
+$nav-header-background: $dark-blue;
+$nav-background: $light-blue-b;
+$nav-color: $white;
+$nav-hover: #45aaf8;
+
+$colors: (
+  "white": $white,
+  "black": $black,
+  "light-blue-a": $light-blue-a,
+  "light-blue-b": $light-blue-b,
+  "darker-blue": $darker-blue,
+  "darkBlue": $dark-blue,
+  "light-gray": $light-gray,
+  "orange": $orange
+);

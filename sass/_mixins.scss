@@ -1,0 +1,33 @@
+@mixin backgroundImage($path, $position: center, $size: cover) {
+    background-image: url($path);
+    background-repeat: no-repeat;
+    background-position: $position;
+    background-size: $size;
+}
+
+@mixin section($image, $backgroundColor) {
+    position: relative;
+    padding: 20px
+    width: 100%;;
+    &::after {
+        z-index: -2;
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        @include backgroundImage($image);
+    }
+    &::before {
+        z-index: -1;
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $backgroundColor;
+        opacity: .9;
+    }
+}
